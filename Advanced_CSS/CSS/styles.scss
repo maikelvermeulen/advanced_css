@@ -1,0 +1,95 @@
+/*variables*/
+$background_page: #c3cfe2;
+$background_main: #FFFFFF;
+$background_footer: #686de0;
+$text_color_main: #555555;
+$text_color_second: white;
+$text_color_third: #b3b6eb;
+$font_main: Tahoma, Geneva, sans-serif;
+
+/*body*/
+body {
+    background-color: $background_page;
+    font-family: $font_main;
+    color: $text_color_main;
+    font-size: 16pt;
+    text-align: center;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+h1 {
+    font-family: $font_main;
+    color: $text_color_second;
+    font-weight: normal;
+    font-size: 1em;
+    margin: 0.3;
+}
+
+h2 {
+    font-family: $font_main;
+    color: $text_color_third;
+    font-weight: normal;
+    font-size: .7em;
+    margin: 0.3;
+}
+
+a {
+    color: white;
+    &:visited {
+        color: white;
+    }
+}
+
+main {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+/*part1*/
+@import "stage1";
+
+/*part2*/
+@import "stage2";
+
+/*part3*/
+@import "stage3";
+
+/*Mobilephones is standaard*/
+
+/*tablets*/
+@media only screen and (min-width: 769px) {
+    body {
+        font-size: 22pt;
+    }
+
+    .album {
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(auto-fill, 1fr);
+    }
+
+    .card {
+        width: 100%;
+        max-width: 640px;
+    }
+}
+
+/*desktops*/
+@media only screen and (min-width: 1025px) {
+    body {
+        font-size: 22pt;
+    }
+
+    .album {
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: repeat(auto-fill, 1fr);
+    }
+
+    .card {
+        width: 100%;
+        max-width: 640px;
+
+    }
+}
